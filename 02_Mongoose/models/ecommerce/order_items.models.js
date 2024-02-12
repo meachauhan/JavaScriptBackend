@@ -25,6 +25,15 @@ const orderItemSchema=new mongoose.Schema({
     },
     orderItems:{
         type:[orderSchema]
+    },
+    address:{
+        tyoe:String,
+        required:true
+    },
+    status:{
+        type:String,
+        enum:["PENDING","CANCELLED","DELIVERED"],
+        default: "PENDING"
     }
 })
 
